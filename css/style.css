@@ -1,0 +1,379 @@
+@charset "utf-8";
+@import url(../css/responsive.css);
+:root {
+    ---c_gr: #b6d968;
+    ---c_ye: #e5dd87;
+    ---c_text: #496f9a;
+    ---c_base: #e8e9eb;
+    /* ---font_tsukushi:'TsukuARdGothic-Regular','ヒラギノ角ゴシック','Hiragino Sans','メイリオ', Meiryo,'MS ゴシック',sans-serif; */
+    /* ---font_tsukushi:tsukushibmarugothic, meiryo, "ヒラギノ角ゴ pro w3", "hiragino kaku gothic pro", sans-serif; */
+    ---font_tsukushi:'TsukuARdGothic-Regular',YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+    ---font_silom: Silom,'Segoe UI Black','Chalkboard SE',sans-serif;
+    ---shadow_1:2px 2px 6px 1px #a3a3a3;
+    ---shadow_b:0px 19px 6px -10px #a3a3a3;
+    ---shadow_w:0px 0px 0px 16px #ffffff;
+    /* ---grad_b: linear-gradient(35deg, #01bfee 0%, #00c6fa 10%, #99ebff 90%, #cbeef7 100%); */
+    /* ---grad_o: linear-gradient(135deg, #ede8df 0%, #f1cc91 20%, #f29e19 60%, #f27719 100%); */
+    /* ---shadow_b: 1px 2px 4px rgba(0, 0, 0, 0.4); */
+    /* ---shadow_g: 20px 20px 2px rgba(94, 140, 166, 0.3); */
+}
+/* 共通部分 */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(---font_tsukushi);
+    background-color: var(---c_base);
+    color: var(---c_text);
+
+}
+h1,h2,h3,h4,nav,#contact p{
+    font-family: var(---font_silom);
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(---c_text);
+}
+.wrapper{
+    width: 900px;
+    /* width: 65%; */
+    margin: 0 auto;
+}
+
+
+h3{
+    font-size: 5rem;
+    border-bottom: 2px solid var(---c_text);
+    display: inline-block;
+    padding: 0 0.2em;
+    margin-bottom: 2rem;
+}
+h3 span{
+    font-size: 3rem;
+    font-family: var(---font_tsukushi);
+    padding-left: 1em;
+}
+/* nav--------- */
+nav ul{
+    position: fixed;
+    display: flex;
+    gap: 5%;
+    right: 5%;
+    top: 0.5em;
+    font-size: 1.8rem;
+}
+nav ul a:hover{
+    background: var(---c_text);
+    color: var(---c_base);
+}
+/* TOPページ -------------------------------------------------------------------------------------*/
+/* top--------- */
+#top_page #top img{
+    width: 100%;
+    margin-bottom: 100px;
+}
+/* works--------- */
+#works img{
+    width: 100%;
+}
+#works .works_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    column-gap: 2rem;
+    row-gap: 1rem;
+    font-size: 1.6rem;
+}
+/* タグ */
+#works .tag{
+    display: flex;
+    color: #fff;
+    gap: 0.5em;
+}
+#works .tag h6{
+    padding: 0 0.5em;
+    font-size: 1.6rem;
+}
+.tag_web{
+    background-color: var(---c_gr);
+}
+.tag_poster{
+    background-color: var(---c_ye);
+}
+.tag_logo{
+    background-color: var(---c_text);
+}
+.tag_banner{
+    background-color: #b8c8db;
+}
+/* about--------- */
+#about{
+    background-color: var(---c_gr)
+}
+#about .about_container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+}
+#about .about_text{
+    width: 70%;
+}
+#about .about_text h5{
+    font-size: 3.2rem;
+}
+#about .about_text p{
+    font-size: 1.6rem;
+}
+#about .about_container img{
+    object-fit: contain;
+    width: 30%;
+}
+/* スキル */
+#about .skill_container{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin: 1em 0;
+    height: 150px;
+    justify-content: space-around;
+}
+/* #about .skill_title{
+    width: 20%;
+    font-size: 2.8rem;
+    color: #fff;
+    background-image: url(../images/ネイビー流体.png);
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+#about .skill_title{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+#about .skill_title img{
+    width: 100%;
+}
+#about .skill_text{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#about .skill_text p{
+    font-size: 1.6rem;
+}
+#about .skill_text .software{
+    font-size: 1.4rem;
+}
+
+/* other */
+#about .other h4,#about .photo h4{
+    font-size: 2.8rem;
+    color: #fff;
+}
+#about .other p,#about .photo p{
+    font-size: 1.6rem;
+}
+
+
+/* contact--------- */
+#contact{
+    font-size: 5rem;
+    color: #fff;
+    background-color: var(---c_text);
+}
+
+/* footer--------- */
+footer{
+    background-color: var(---c_text);
+    color: #fff;
+    /* height: 150px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+}
+/* footer svg{
+    top: 0;
+    width: 100%;
+} */
+
+/* 内部ページ -------------------------------------------------------------------------------------*/
+.deta_page section{
+    margin-bottom: 5rem;
+}
+.deta_page section:nth-last-child(1){
+    margin-bottom: 0;
+    padding-bottom: 5rem;
+}
+#works_top .works_name{
+    font-size: 5rem;
+    color: #fff;
+    display: inline-block;
+    padding:0 0.5em;
+    margin: 5rem 0 0.5em;
+    font-family: var(---font_tsukushi);
+    font-weight: bolder;
+}
+#works_top p{
+    font-size: 1.6rem;
+    margin-bottom: 2em;
+}
+#works_top .works_top_image{
+    display: flex;
+}
+#works_top .works_top_image img{
+    object-fit: contain;
+}
+/* web */
+#works_top .works_top_image img:nth-child(1){
+    width: 80%;
+}
+#works_top .works_top_image img:nth-child(2){
+    width: 20%;
+}
+#works_top .works_only_image img{
+    width: 100%;
+    justify-content: center;
+}
+/* works_list */
+#works_point .works_list_container{
+    display: flex;
+    margin-bottom: 3em;
+}
+#works_point .works_list_container dt{
+    font-size: 2.1rem;
+    display: block;
+    width: 20%;
+    text-align: center;
+}
+#works_point .works_list_container dd{
+    font-size: 1.6rem;
+    display: block;
+    width: 80%;
+}
+#works_point .long_message p{
+    padding-bottom: 0.5em;
+}
+#works_point .works_list_container img{
+    width: 100%;
+    box-shadow: var(---shadow_1);
+}
+#works_point .works_list_container .point_p_flex{
+    display: flex;
+    gap: 1em;
+}
+
+/* works_image */
+#works_image{
+    background: #fff;
+}
+#works_image .works_image1{
+    display: flex;
+    justify-content: space-between;
+}
+#works_image img{
+    width: 100%;
+    box-shadow: var(---shadow_1);
+}
+#works_image .image_pc{
+    width: 65%;
+}
+#works_image .image_sp{
+    width: 30%;
+}
+#works_image .scroll{
+    overflow: scroll;
+    height: clamp(20rem, -3.002rem + 52.5vw, 60rem);
+    margin-bottom: 5rem;
+    box-shadow: var(---shadow_1);
+}
+.image2_flex{
+    display: flex;
+    justify-content: space-between;
+}
+.works_image2 h4{
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 2em 0 1em;
+}
+/* nextep -------------------------------------------------------------------------------------*/
+#nextep .works_image2{
+    display: flex;
+    justify-content: space-between;
+}
+#nextep .works_image2_left{
+    width: 45%;
+}
+#nextep .works_image2_left img{
+    width: 100%;
+}
+#nextep .works_image2_right{
+    width: 45%;
+}
+#nextep .works_image2_right img{
+    width: 70%;
+}
+#nextep .hamburger_icon{
+    width: 30%;
+    margin: 0 auto;
+    text-align: end;
+}
+#nextep .hamburger_icon img{
+    width: 85%;
+}
+/* CHOCOROCK */
+#chocorock .image2_flex img{
+    object-fit: contain;
+    width: 48%;
+}
+/* halo */
+.logo{
+    width: 70%;
+    margin: 0 auto;
+}
+.logo img{
+    margin-bottom: 10px;
+}
+
+/*==================================================
+ギャラリーのためのcss
+===================================*/
+.gallery{
+    columns: 4;/*段組みの数*/
+    padding:0 15px;/*ギャラリー左右に余白をつける*/
+    margin:0;
+    }
+    
+    .gallery li {
+        margin-bottom: 20px;/*各画像下に余白をつける*/
+    list-style:none;
+    }
+    
+    /*ギャラリー内のイメージは横幅100%にする*/
+    .gallery img{
+        width:100%;
+        height:auto;
+        vertical-align: bottom;/*画像の下にできる余白を削除*/}
+    
+    /*　横幅900px以下の段組み設定　*/
+    @media only screen and (max-width: 900px) {
+        .gallery{
+        columns:3;
+        }	
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .gallery{
+        columns: 2;
+        }	
+    }
